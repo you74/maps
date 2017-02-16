@@ -24,12 +24,12 @@
     marker1.setMap(map);
   }
   function weather() {
-  $.get("https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22nome%2C%20ak%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys"), 
-    function (data, status) {
-    $.("#results")
-    }
+  $.get("https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22nome%2C%20ak%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys"), function (data, status) {
+    alert(data.query.results.item.title);
+    alert(data.query.results.item.conditions.temps);
+    });
   }
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?key= AIzaSyCm-Mkwk5L-lmg0_oG0nu-2PfM7T-pYQJM &callback=myMap"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key= AIzaSyAd1T8UBe6ZIyKNcZYQP0MTWnwblUotZFY &callback=myMap"></script>
 </body>
 </html>
