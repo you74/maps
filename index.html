@@ -16,8 +16,10 @@
       mapTypeId: google.maps.MapTypeId.HYBRID
     }
     var myCenter = new google.maps.LatLng(45.955166, 6.169232);
+    var myCenter1 = new google.maps.LatLng(46.955166, 9.169232);
     var map = new google.maps.Map(document.getElementById("map"), mapOptions);
     var marker = new google.maps.Marker({position:myCenter});
+    var marker1 = new google.maps.Marker({position:myCenter1});
     marker.setMap(map);
   }
 </script>
